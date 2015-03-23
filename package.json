@@ -1,0 +1,21 @@
+{
+  "name": "trait-purender",
+  "version": "0.1.0",
+  "description": "",
+  "author": "G. Kay Lee <balancetraveller+github@gmail.com>",
+  "scripts": {
+    "setup": "npm cache clean && npm install"
+  },
+  "main": "trait-purender.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gsklee/trait-purender"
+  },
+  "keywords": [],
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "iojs": ">=1.6.0"
+  },
+  "license": "MIT"
+}
