@@ -1,17 +1,17 @@
-import objectPath from 'object-path';
+import value from 'object-path';
 
 export const purender = ({raw}, ...values) => ({
   [Symbol.toStringTag]: 'purender',
 
-  shouldComponentUpdate(...next) {
+  shouldComponentUpdate(...args) {
     const watchlist = String.raw({raw}, ...values).split(' ');
 
     return watchlist.reduce((m, n) => {
-      const [props, state] = next,
+      const [props, state] = args,
             next = {props, state},
             [type, ...path] = n.split('.');
 
-      return m || objectPath.get(this[type], path) !== objectPath.get(next[type], path);
+      return m || value.get(this[type], path) !== value.get(next[type], path);
     }, false);
   }
 });
