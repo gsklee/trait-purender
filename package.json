@@ -13,7 +13,9 @@
     "url": "https://github.com/gsklee/trait-purender"
   },
   "keywords": [],
-  "dependencies": {},
+  "dependencies": {
+    "object-path": "^0.9.1"
+  },
   "peerDependencies": {
     "estraits": "^0.3.1"
   },
