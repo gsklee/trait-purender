@@ -1,0 +1,33 @@
+{
+  "name": "trait-purender",
+  "version": "0.1.0",
+  "description": "",
+  "author": "G. Kay Lee <balancetraveller+github@gmail.com>",
+  "scripts": {
+    "setup": "npm cache clean && npm install",
+    "build": "gulp build:scripts"
+  },
+  "main": "trait-purender.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gsklee/trait-purender"
+  },
+  "keywords": [],
+  "dependencies": {
+    "object-path": "^0.9.1"
+  },
+  "peerDependencies": {
+    "estraits": "^0.3.1"
+  },
+  "devDependencies": {
+    "babel": "^4.7.16",
+    "gulp": "^3.8.11",
+    "gulp-load-plugins": "^0.9.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-babel": "^4.0.0"
+  },
+  "engines": {
+    "iojs": ">=1.6.0"
+  },
+  "license": "MIT"
+}
