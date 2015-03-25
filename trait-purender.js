@@ -6,6 +6,8 @@ var _toArray = function (arr) { return Array.isArray(arr) ? arr : Array.from(arr
 
 exports.__esModule = true;
 
+var Immutable = _interopRequire(require("immutable"));
+
 var value = _interopRequire(require("object-path"));
 
 var purender = function (_ref2) {
@@ -25,7 +27,7 @@ var purender = function (_ref2) {
         args[_key2] = arguments[_key2];
       }
 
-      var watchlist = String.raw.apply(String, [{ raw: raw }].concat(values)).split(" ");
+      var watchlist = String.raw.apply(String, [{ raw: raw }].concat(values)).split(/\s+/);
 
       return watchlist.reduce(function (m, n) {
         var props = args[0];
@@ -39,7 +41,7 @@ var purender = function (_ref2) {
 
         var path = _n$split2.slice(1);
 
-        return m || value.get(_this[type], path) !== value.get(next[type], path);
+        return m || !Immutable.is(value.get(_this[type], path), value.get(next[type], path));
       }, false);
     };
 
