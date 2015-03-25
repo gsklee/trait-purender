@@ -16,9 +16,12 @@ var purender = function (_ref2) {
   }
 
   var raw = _ref2.raw;
+
+  var watchlist = String.raw.apply(String, [{ raw: raw }].concat(values)).split(/\s+/);
+
   return (function () {
     var _ref = {};
-    _ref[Symbol.toStringTag] = "purender";
+    _ref[Symbol.toStringTag] = "Purender for " + watchlist.join(" and ");
 
     _ref.shouldComponentUpdate = function shouldComponentUpdate() {
       var _this = this;
@@ -26,8 +29,6 @@ var purender = function (_ref2) {
       for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
         args[_key2] = arguments[_key2];
       }
-
-      var watchlist = String.raw.apply(String, [{ raw: raw }].concat(values)).split(/\s+/);
 
       return watchlist.reduce(function (m, n) {
         var props = args[0];
