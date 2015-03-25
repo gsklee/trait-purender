@@ -1,3 +1,4 @@
+import Immutable from 'immutable';
 import value from 'object-path';
 
 export const purender = ({raw}, ...values) => ({
@@ -11,7 +12,7 @@ export const purender = ({raw}, ...values) => ({
             next = {props, state},
             [type, ...path] = n.split('.');
 
-      return m || value.get(this[type], path) !== value.get(next[type], path);
+      return m || !Immutable.is(value.get(this[type], path), value.get(next[type], path));
     }, false);
   }
 });
