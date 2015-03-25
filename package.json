@@ -1,6 +1,6 @@
 {
   "name": "trait-purender",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "",
   "author": "G. Kay Lee <balancetraveller+github@gmail.com>",
   "scripts": {
@@ -14,6 +14,7 @@
   },
   "keywords": [],
   "dependencies": {
+    "immutable": "^3.6.4",
     "object-path": "^0.9.1"
   },
   "peerDependencies": {
